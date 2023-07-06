@@ -12,10 +12,57 @@
 
     //ENTRADA
 
-    
+    const telefone = prompt("Telefonou para a vítima?").toLowerCase()
+    const local = prompt("Esteve no local do crime?").toLowerCase()
+    const moradia = prompt("Mora perto da vítima?").toLowerCase()
+    const devia = prompt("Devia para a vítima?").toLowerCase()
+    const trabalhou = prompt("Já trabalhou com a vítima?").toLowerCase()
+
     //PROCESSAMENTO
+    let pontos = 0;
 
+    switch (telefone) {
+        case "s":
+            pontos++;
+            break;
+    }
+    switch (local) {
+        case "s":
+            pontos++;
+            break;
+    }
+    switch (moradia) {
+        case "s":
+            pontos++;
+            break;
+    }
+    switch (devia) {
+        case "s":
+            pontos++;
+            break;
+    }
+    switch (trabalhou) {
+        case "s":
+            pontos++;
+            break;
+    }
 
+    let resultado;
+    switch (pontos) {
+        case 2:
+            resultado = "Suspeita";
+            break;
+        case 3:
+        case 4:
+            resultado = "Cúmplice";
+            break;
+        case 5:
+            resultado = "Assassino";
+            break;
+        default:
+            resultado = "Inocente";
+            break;
+    }
     //SAÍDA
-
+    alert(resultado)
 </script>
