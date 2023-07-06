@@ -5,11 +5,20 @@
     */
 
     //ENTRADA
-
+    const numero = Number(prompt("Insira um numero!"))
     
     //PROCESSAMENTO
-
-    
+    switch (numero % 2) {
+        case 0:
+            alert(`O numero ${numero} é par`)
+            break;
+        case 1:
+            alert(`O numero ${numero} é impar`)
+            break;
+        default:
+            alert("Errooooooo");
+            break;
+    }
     //SAÍDA
 
 </script>
