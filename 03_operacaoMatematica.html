@@ -10,25 +10,51 @@
     //ENTRADA
     const num1 = Number(prompt("Insira um numero"))
     const num2 = Number(prompt("Insira outro numero"))
-    let mais = num1 + num2
-    let menos = num1 - num2
-    let vezes = num1 * num2
-    let divisao = num1 / num2
-    const operação = prompt("Qual operaçao deseja ?").toLowerCase()
+    const operação = prompt("Qual operaçao matematica deseja relalizar?(+, - , * , /)")
     //PROCESSAMENTO
-    
-    
-    switch (mais % 2) {
-        case 0:
-            alert(`A soma resulta em ${mais} esse numero é par`)            
+    let resultado;
+    let mensagemf;
+
+    switch (operação) {
+        case "+":
+            resultado = num1 + num2;
             break;
-        case 1: 
-            alert(`A soma resulta em ${mais} esse numero é impar`);
-        break
-        case 
-        default:
+        case "-":
+            resultado = num1 - num2;
+            break;
+        case "*":
+            resultado = num1 * num2;
+            break;
+        case "/":
+            resultado = num1 / num2
             break;
     }
-    //SAÍDA
+    switch (true) {
+        case resultado % 2 === 0:
+            mensagemf += "Par,";
+            break;
+        default:
+            mensagemf += "Ímpar,";
+            break;
+    }
 
+    switch (true) {
+        case Number.isInteger(resultado):
+            mensagemf += "Inteiro,";
+            break;
+        default:
+            mensagemf += "decimal,";
+            break;
+    }
+    switch (true) {
+        case resultado >= 0:
+            mensagemf += "positivo.";
+            break;
+
+        default:
+            mensagemf += "negativo.";
+            break;
+    }
+
+    alert(`O resultado da operaçao é ${resultado}, ele é ${mensagemf}`);
 </script>

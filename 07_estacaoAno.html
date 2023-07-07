@@ -6,9 +6,68 @@
     */
 
     //ENTRADA
+    const hemisfério = prompt("Qual o hemisferio que voce se encontra").toLowerCase()
+    const mes = prompt("Esta em qual mes do ano").toLowerCase()
 
-    
     //PROCESSAMENTO
+    let estação;
+    switch (hemisfério) {
+        case "norte":
+            switch (mes) {
+                case "janeiro":
+                case "fevereiro":
+                case "março":
+                    estação = "inverno";
+                    break;
+                case "abriu":
+                case "maio":
+                case "junho":
+                    estação = "primavera"
+                    break;
+                case "julho":
+                case "agosto":
+                case "setembro":
+                    estação = "verao"
+                    break;
+                case "outubro":
+                case "novembro":
+                case "dezembro":
+                    estação = "outono"
+                    break;
+                default:
+                    alert("Mes invalido");
+                    break;
+            }
+            break;
+        case "sul":
+            switch (mes) {
+                case "janeiro":
+                case "fevereiro":
+                case "março":
+                    estação = "verao";
+                    break;
+
+                case "abriu":
+                case "maio":
+                case "junho":
+                    estação = "outono"
+                    break;
+                case "julho":
+                case "agosto":
+                case "setembro":
+                    estação = "inverno"
+                    break;
+                case "outubro":
+                case "novembro":
+                case "dezembro":
+                    estação = "primavera"
+                    break;
+            }
+
+    }
+
+    alert(`A estaçao do ano que voce se encontra é ${estação}`)
+
 
 
     //SAÍDA
